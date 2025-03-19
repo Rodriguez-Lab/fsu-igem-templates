@@ -1,0 +1,568 @@
+{% extends "layout.html" %}
+
+{% block title %}Entrepreneurship{% endblock %}
+{% block head %}
+<img src="https://static.igem.wiki/teams/4680/wiki/banners/entr.png" style="width:100%; object-fit: cover;">
+{% endblock %}
+{% block lead %}We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.{% endblock %}
+
+{% block page_content %}
+
+<div class="safety-container" style="background-color: #99A574; color:black; margin:20px;height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+  <h1 style="font-family: copperplate; padding-top:10px;">Introduction</h1>
+</div>
+
+<h2>
+  <p style="font-size:16px;">The Entrepreneurship Business Plan is proposed by the Florida State University iGEM Team and describes our project, E. esperance. The term "esperance" means hope and that reflects our intent of using cell-based therapeutics to treat those in need. Our plan is to safely introduce this therapeutic in the market with a viable model that benefits both patients with Trimethylaminuria (TMAU) and partner companies interested in developing our therapeutic. 
+    Discussed is the process and how we propose to introduce our therapeutic in a safe and responsible manner. The diagram below represents the overall timeline of events from the Initial Stages of Development to Entrance into the Market.<br><br>
+    This Plan will also explore the future possibilities of expanding the E. esperance beyond just treating TMAU. Initial discussions with many stakeholders, including Researchers & Professors of the FSU College of Medicine, Professors of the Jim Moran School of Entrepreneurship, Patent & Corporate Lawyers, Professors of the FSU College of Business, Leadership Members in the Biotechnology Sector, Physicians, and importnatly with TMAU patients.
+    <u>We also received funding from the FSU College of Medicine's Institute for Pediatric Rare Diseases (IPRD) to further continue this project in the next 6 months after the iGEM Jamboree. These funds will allow the team to collect additional efficacy data for this project to accelerate the development of our Proof of Concept</u>. Further details can be found in the "What's Next?" Section of the Report.
+    <br><br>All of these collaborations and discussions were very useful in refining the design of E. esperance and the Entrepreneurship Business Plan of this iGEM Project. The input received is greatly appreciated and it allowed the iGEM Team to make the implementation, <b>Safe, Efficient, and Effective</b>.  </p>
+
+    <p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/timeline.png" width="900" height="300"> </center></p>
+
+</h2>
+
+<!-- JavaScript for handling accordion functionality -->
+<script>
+  function toggleAccordion(id) {
+    var element = document.getElementById(id);
+    if (element.classList.contains("show")) {
+      element.classList.remove("show");
+    } else {
+      element.classList.add("show");
+    }
+  }
+</script>
+
+
+    <div class="safety-container" style="background-color: #99A574; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: copperplate; padding-top:10px;">The Problem</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="margin:0;">
+    <div class="accordion-item" style="background-color:#E0E9D5;font-size: 12px;">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button" type="button" onclick="toggleAccordion('collapseThree')" style="background-color:#EEBC86; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+          More Info
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="font-size: 16px;">
+          <p>  <b>Trimethylaminuria (TMAU)</b>, often referred to as "Fish Odor Syndrome," is a rare metabolic disorder characterized by the body's inability to break down a compound called Trimethylamine (TMA) properly. This leads to the accumulation of TMA in the body, which is then released through sweat, breath, and urine, resulting in a strong and unpleasant fish-like odor that individuals with TMAU may emit [1].</p>
+           <p> Currently, roughly 1 in 10,000 people suffer from Trimethylaminuria (TMAU) in the world [1]. This is <b>approximately 800,000 people</b> globally who suffer from TMAU, but it is likely an <u><b>underestimate</b></u> because of the lack of testing sites and the high cost of just receiving a test. TMAU is so rare that the National Institutes of Health does not have an accurate statistic to represent the number of people affected. With the lack of testing sites in the United States and the high cost of just receiving a test, it is difficult to give an exact percentage of people affected. There are <b>NO current treatments</b> for TMAU available to date as there has been limited research and funding for developing a therapeutic. Many TMAU patients post their diet plans & routines on websites such as RareConnect, Reddit, and YouTube, but these are often ineffective in reducing the raw fish odor that correlates with TMAU patients. </p>
+      
+            <p> The problem of TMAU originates from the moment a patient ingests food. In most mammals, specifically humans, our body digests foods that contain amino acids. Examples of these amino acids include Choline, Ergothioneine, Betaine, L-Carnitine, and γ-Butyrobetaine [3]. All of these examples are converted into the molecule Trimethylamine (TMA) by their respective enzymes, as seen in <b class="bold">Figure 1</b>. </p>
+
+
+
+            <p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/tma-dietary-precursors-and-enzymes.png" width="1100" height="800"> </center></p>
+            <p> <center> <b class="bold">Figure 1: Dietary Precursors and Corresponding Enzymes for Trimethylamine (TMA) [3]</b> </center></p>
+
+            <p>TMAU results from over-accumulation of TMA, and in patients who have TMAU, they lack the liver enzyme called FMO3 (Flavin-Containing Monooxygenase 3). TMAU patients have a deficiency in this enzyme, as seen in <b class="bold">Figure 2</b>. The FMO3 enzyme binds to Trimethylamine (TMA), which then oxidizes the molecule to form Trimethylamine-N-Oxide (TMAO). The inability to properly metabolize TMA leads to its build up in the body that results in a characteristic foul odor that is excreted through sweat and urine. </p>
+
+            <p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/tma-cycle-in-tmau-patient.png"width="600" height="500"> 
+            <img src="https://static.igem.wiki/teams/4680/wiki/tma-cycle-in-healthy-person.png"width="600" height="500"> </center>
+            </p>
+            <p> <center> <b class="bold">Figure 2: TMA Cycle of TMAU Patient (Top) & TMA Cycle of Non-TMAU Patient (Bottom) [2]</b> </center></p>
+      
+            <p> TMAU is classified as Autosomal Recessive [1], which means that for an individual to develop TMAU, they must inherit two copies of the defective gene, one from each parent, who are usually carriers of the mutated gene but do not exhibit symptoms of the condition themselves. The specific gene associated with TMAU is the FMO3 gene, which encodes the FMO3 enzyme. Individuals with TMAU, have a mutation in both copies of the FMO3 gene, leading to a deficiency or malfunction of the FMO3 enzyme. As a result, these individuals are unable to properly metabolize TMA, leading to its buildup in the body and the characteristic foul odor associated with the condition.</p>
+      
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="safety-container" style="background-color: #99A574; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: copperplate; padding-top:10px;">The Product</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="margin:0;">
+    <div class="accordion-item" style="background-color:#E0E9D5;font-size: 12px;">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button" type="button" onclick="toggleAccordion('collapseFour')" style="background-color:#EEBC86; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+          More Info
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="font-size: 16px;">
+          <p> After exploring dozens of possible avenues in search of an effective treatment for TMAU, our team concluded that developing a probiotic is the best option. Especially since there is some evidence that Probiotics works invitro [22]. The probiotic, E. esperance, expresses the Trimethylamine Mono-oxygenase (TMM) enzyme necessary to oxidize Trimethylamine (TMA) to Trimethylamine-N-Oxide (TMAO). This possible simple dietary solution is the most effective way to impact this extremerly marginalized group of TMAU patients. The goal of E. esperance is to be readily accessible and simple to use. E. esperance is taken orally before consuming a meal, as the probiotic enters the gut, it will begin to express the TMM enzyme and oxidize approaching TMA molecules within the Small Intestine. This oxidation process will convert TMA to TMAO. </p>
+            
+           <p> This solution leads to our goal, which is to reduce the accumulation of Trimethylamine (TMA), and hopefully reduce the raw fish odor that TMAU patients experience. E. esperance is not a cure for this diseases but is a supplement that will have to be used daily before consuming a meal. This is similar to the product, Lactaid which provides an alternative to people with Lactose-Intolerance so they can digest products that contain Lactose without discomforting side-effects. However, E. esperance is a probiotic whereas Lactaid is not. </p>
+
+<p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/e-esperance-method-1.png" width="1200" height="600"> </center> </p>
+
+            <p>Three key factors behind our decision to pursue the development of a probiotic therapeutic for Trimethylaminuria (TMAU). These factors not only contribute to the expedited delivery of an effective treatment but also provide a strategic advantage in terms of Intellectual Property (IP) protection.</p>
+            
+            <p> One of the foremost advantages of our approach is the speed at which we can develop and bring our product to market. Probiotics are known for their relatively rapid development timelines compared to traditional pharmaceuticals. This accelerated pace enables us to advance from laboratory research to offering relief to TMAU patients in need as swiftly as possible.</p>
+
+            <p> Probiotic production is inherently more straightforward and cost-effective than many other pharmacotherapeutic modalities. This ease of production not only streamlines manufacturing processes but also contributes to cost-efficiency, making our treatment widely accessible.</p>
+
+            <p>While we recognize the importance of adhering to FDA regulations to ensure product safety and efficacy, probiotics often face fewer regulatory hurdles than traditional drugs. This advantage expedites the regulatory approval process, allowing us to navigate the path to market with greater speed and agility.</p>
+
+            <p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/pill-bottle.png" width="200" height="400"> </center></p>
+
+            <p> In terms of protecting our Intellectual Property, after speaking with <b>Mr. Jared Namm, a Corporate Law Attorney for The Berman Law Group</b>, we acknowledge the significance of trademark and consumer loyalty in establishing a strong market presence. While patenting our product is on our agenda, we approach this aspect pragmatically. Our product's niche market size makes it less appealing for larger competitors to challenge us, especially when considering the resources required to enter the space. </p>
+
+            <p> Furthermore, our solution is distinct from existing IP, such as the patent developed by the company, Synlogic covering TMA therapeutics. In 2017, Synlogic established a patent titled: ""BACTERIA ENGINEERED TO TREAT DISORDERS IN WHICH TRIMETHYLAMINE (TMA) IS DETRIMENTAL". The patent covered multiple pathways to convert TMA to TMAO in their claims section, HOWEVER the pathway we are suggesting is not included in the patent. Secondly, after discussing with <b>Dr. Brent Edington, Director of the FSU Office of Commercialization</b>, we found that this patent is <b>NOT ISSUED</b> and currently not filed in the <b>United States Patent and Trademark Office (USPTO)</b>. This means that their published patent application is strictly in the <b>Public Domain</b>. This means we cannot patent any concept that is in the document, but since our's is not similar, we do not have to worry about infringement. This advantage allows us to institute our own patented idea with confidence and ensures that we can focus on delivering a groundbreaking treatment for TMAU patients while maintaining a competitive edge in the market. </p>
+
+            <p> Another point to add is the discussions with <b>Dr. John Casey, Head of Business Development for Senda Biosciences</b>, where he shared that if a patent is not feasible, explore the possibiliy of being acquired by a larger biotechnology company that agrees with your initiative. That way, if acquired E. esperance can be continued to progress. This provides an avenue for E. esperance to access the necessary resources and infrastructure of a larger company, which can significantly expedite the product's development. It also ensures that E. esperance remains available to patients in need, as the larger company is likely to have the means to scale up production and reach the intended customer base. Nonetheless, with support from the FSU College of Medicine, we will continue to operate alone with one product in our portfolio initially.</p>
+
+            <p>Further Details about the science behind E. esperance can be found on the <a href="https://2023.igem.wiki/fsu/engineering" class="link" target="_blank">Engineering Page</a>. </p>
+           
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="safety-container" style="background-color: #99A574; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: copperplate; padding-top:10px;">The Customer</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="margin:0;">
+    <div class="accordion-item" style="background-color:#E0E9D5;font-size: 12px;">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button" type="button" onclick="toggleAccordion('collapseFive')" style="background-color:#EEBC86; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+          More Info
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="font-size: 16px;">
+          <p> The primary customer base of E.esperance are individuals diagnosed with Trimethylaminuria (TMAU). Since TMAU is “ultra rare” (as it has been described by industry experts) and there are presently no treatments on the market, the annual revenue generated from the purchase of treatments is not applicable. Therefore, the estimated market value is significantly smaller than most disease-based treatments. </p>
+
+          <p>Though due to its chronic nature and high demand, E. esperance may still be deemed profitable. Moreover, we feel that the societal benefit outweighs the financial profits in this case. Approximately <b class="bold">less than 1,000,000 people </b> in the world suffer from TMAU, but the annual revenue projections are expected to remain stable given that E. esperance is not a curative measure, rather a supplement to reduce the symptoms of TMAU (should all other economic factors remain the same). Should our trials prove effective, E.esperance will reduce TMA concentrations produced within the body after an individual consumes a meal, and hopefully reduce the pungent raw fish odor detected. </p>
+          
+          <p>In essence, while the market for TMAU treatments may be relatively small in terms of patient numbers, the persistent demand for symptom management positions E. Esperance as a potentially profitable endeavor. Our primary mission is to enhance the quality of life for TMAU patients by offering a valuable solution within this specialized segment of the healthcare landscape. </p>
+          
+          <p> From the many interviews we conducted with TMAU patients, which can be found on our <a href="https://2023.igem.wiki/fsu/human-practices" class="link" target="_blank">Human Practices Page</a> the overwhelming response is that they are willing to try any treatment that can help. With that in mind, we want to ensure that E. esperance follows safety and government guidelines, along with both bioethical and ethical business practices to provide hope and trust for TMAU patients who use E.esperance. </p>
+
+          <p> Although we have yet been unable to meet with a doctor who's worked with TMAU patients, we had the opportunity to interview several TMAU patients. One particular conversation that the team had was with a TMAU patient named Gloria. Gloria provided amazing feedback on what many TMAU patients would like to see if E. esperance was deemed feasible. This was her message: "When considering ethical aspects, I believe it is critical to prioritize the following principles: accessibility, affordability, safety, and fair access to ensure equitable access, preventing any demographic factors (such as income, race, or geography) from preventing individuals from receiving it who needs it. I'm probably speaking from a place of passion since we suffer from this debilitating disease and desire to lead a judgement-free life and break free from constraints. That said, it's imperative to consider the above principles; it gives us an opportunity for quality of life and hope!"  </p>
+
+          <p> Gloria later added: "If your team is still conducting studies or clinical trials, I am eager to contribute as a participant. I am willing to do whatever I can to make a positive contribution." </p>
+
+          <p>Reaching out to TMAU patients will be challenging, but with feedback from the ones we interviewed, the community is closely connected and actively seeking solutions. There are several private Facebook Groups and multiple Reddit subreddits that we plan to reach out to for the Clinical Study, as described later in the report. If this outreach is successful, we will engage through the same channels upon the release of our treatment. The MEBO Blog is also instrumental in connecting with TMAU patients. Another point of access to connect with TMAU patients is through the National Organization for Rare Diseases (NORD), and also contacting patient advocacy groups about E. esperance. </p>
+
+          <p>We achieved success in raising money and awareness through our initial fundraiser with the FSU Foundation <b>raising $1000</b>. As we continue to collect funds from charitable donors, this will support our advertising budget. Fortunately, the targeted online advertising through which we are directly reaching out to TMAU patients is efficient and inexpensive. As we grow as a company, we will have greater access to mainstream advertising, which will, in turn, raise awareness of this widely unknown disease. Through increased awareness, we aim to both continue collecting donations and capture the business of suspected TMAU patients who have yet to be diagnosed.</p>
+
+<p> Gloria also mentioned important questions that we must consider and what TMAU patients are also asking.</p>
+
+          <p>
+            <li> How soon after the first treatment can we anticipate noticeable results? Is it immediate, or should we expect changes within a specific timeframe, like 30, 60, or 90 days? </li>
+            <li> How frequently will patients need to take the treatment medication, and is the dosage requirement universal or tailored to individual cases?   </li>
+            <li> Will the first treatment primarily minimize the odor associated with TMAU, or is it expected to eliminate it over time?   </li>
+            <li> Are there dietary suggestions or requirements that should accompany the treatment to achieve the best possible results? </li>
+            <li> What possible side effects are associated with the treatment that patients should be aware of? </li>
+            <li> How long will the first treatment provide results? Indefintely or a limited amount of time? </li>
+            </p>
+
+          <p> With these questions in mind, we plan to have these answered using the Clinical Study mentioned later in this report. </p>           
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="safety-container" style="background-color: #99A574; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: copperplate; padding-top:10px;">The Stakeholder</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="margin:0;">
+    <div class="accordion-item" style="background-color:#E0E9D5;font-size: 12px;">
+      <h2 class="accordion-header" id="headingSiz">
+        <button class="accordion-button" type="button" onclick="toggleAccordion('collapseSix')" style="background-color:#EEBC86; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+          More Info
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="font-size: 16px;">
+          <p> As mentioned, TMAU is a rare disease affecting less than 1,000,000 people in the world. This rarity presents a unique challenge when attempting to attract the interest of large pharmaceutical companies like Johnson & Johnson or Gilead Sciences. These industry giants typically engage in ventures that offer the potential for substantial revenue, often associated with diseases that impact a broader patient base. Consequently, the size of the potential market for TMAU treatments may not align with the revenue expectations of such companies. We decided to create a similar model replicating ZBiotics which is discussed further in-depth in the Production Process Section. </p>
+
+        <p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/business-map.png" width="700" height="500"> </center></p>
+
+
+          <p> For E. Esperance, a crucial stakeholder in the venture is a Manufacturing Company responsible for producing the probiotic. In this envisioned partnership, E. Esperance would provide the necessary patent, intellectual property, and detailed production protocols to manufacture the probiotic effectively. In return, the manufacturing company would receive a predetermined percentage of the profits generated from the sales of the probiotic. E. esperance also requires a Biological Parts Supplier to provide materials and a Distribution Facility for product shipments.</p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="safety-container" style="background-color: #99A574; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: copperplate; padding-top:10px;">Business Overview</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="margin:0;">
+    <div class="accordion-item" style="background-color:#E0E9D5;font-size: 12px;">
+      <h2 class="accordion-header" id="heading7">
+        <button class="accordion-button" type="button" onclick="toggleAccordion('collapse7')" style="background-color:#EEBC86; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+          More Info
+        </button>
+      </h2>
+      <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="font-size: 16px;">
+          <p>Our Business is represented in the figure below. As shown, E. esperance's success is based on results from the Clinical Study. Our <b> Business Model</b> focuses on the key players and factors that will determine the success of this product.</p>  
+
+            <p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/busmodtest.png" width="1000" height="1000"> </center> </p>
+            <p> E. esperance has adopted a pricing model similar to that of ZBiotics, a pioneering biotechnology company. ZBiotics created a probiotic before consuming alcohol with an average price of $10 per vial supplemment. The daily supplement treatment for Trimethylaminuria (TMAU) is priced at $10 per week, resulting in an <b>annual expense of $520</b> per patient. At the bare minimum of TMAU patients is 800,000, the estimated revenue projection annually is <b>$416 Million</b>. Given an estimated population of 1,000,000 individuals affected by TMAU, E. esperance's annual revenue projection is <b> $520 Million </b>. Given these calculations, the revenue stream is viable for this product. </p>
+
+<p> The decision to price the E. esperance supplement at $10 per week is based on a competitive analysis and market research, aligning with industry standards and offering affordability for patients. Speaking with several TMAU patients, it was deemed reasonable to move forward with this price in order to generate profits for a small customer base. After engaging with the <b>Florida Rare Disease Advisory Council</b> we learned that the <b>Florida Agency for Healthcare Administration (AHCA)</b> has a committee focused on pharmaceuticals and their potential inclusion in Medicaid programs. For TMAU patients with incomes not sustainable for an annual cost of $520, there is a possibility that engaging with AHCA can develop a plan for Medicaid coverage of E. esperance.</p>
+
+            <p> E. esperance is not a cure but a maintenance supplement. As a result, revenue is anticipated to remain relatively stable, with fluctuations influenced by economic conditions. The revenue projection demonstrates the potential for long-term viability and sustainability of the E. Esperance venture. E. esperance can also expand its market outreach by looking to find solutions for other rare diseases once profits are sufficient to allow for investment in further research.</p> 
+            <p> A <b> SWOT analysis</b> is a strategic planning tool that assesses an organization's Strengths, Weaknesses, Opportunities, and Threats to make informed decisions and develop effective strategies. Below you can see our SWOT Analysis in its entirety. Our SWOT Analysis is based on our understanding of what the market and production for E. esperance might look like.</p>
+
+            <p> 
+              <b> Strengths </b>
+              <li> E. esperance is <b> affordable </b> because of the use of common bacteria (E. coli) used in the probiotic industry. </li>
+              <li> E. esperance is probiotic therapeutic which aligns with the concept of <b>holistic</b> and <b>non-invasive</b> healthcare.</li>
+              <li> E. esperance is <b>scalable</b> because bacteria can be easily cultured & produced in a laboratory setting.</li>
+              <li> E. esperance only expresses the TMM enzyme, which means it is <b>specific</b> to one mechanism, the oxidation of Trimethylamine (TMA) to Trimethylamine-N-Oxide (TMAO) </li>
+              <li> <b>Low Imports</b> required to supply manufacturing of E. esperance. </li>
+            </p>
+
+            <p> 
+              <b> Weaknesses </b>
+              <li> E. esperance has not been officially <b> tested </b> to work in the human microbiome, it is merely a proof of concept.</li>
+              <li> Due to lack of Clinical Studies, the <b> side effects</b> of E. esperance is yet to be determined.</li>
+              
+            </p>
+
+            <p> 
+              <b> Opportunities </b>
+              <li>Potential for <b>High & Stable Revenue Growth</b>.</li>
+              <li> The science behind the development of E. esperance can be utilized to find <b>potential treatments </b> for other rare diseases</li>
+              <li> The proof of concept can potentially be utilized to reduce levels of Trimethylamine-N-Oxide (TMAO) and other possible precursors of Cardiovascular Disease.</li>
+              <li> The Probiotic Market is <b>expanding</b>, however, no probiotic exists as a TMAU treatment. This means E. esperance is unique and difficult for other competitors to produce.</li>
+              <li>•	There may be other compounds or drugs that could <b>enhance</b> the potency of E. Esperance </li>
+            </p>
+         
+            <p> 
+              <b> Threats </b>
+              <li> There is a possibility that another company might create a <b>superior</b> probiotic-based TMAU treatment <b> faster</b> than E. esperance. </li>
+              <li> Antibiotics (or other medications) may interact with E. esperance to limit its <b>effectiveness</b>.</li>
+              
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+
+    <div class="safety-container" style="background-color: #99A574; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: copperplate; padding-top:10px;">Financial Analysis</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="margin:0;">
+    <div class="accordion-item" style="background-color:#E0E9D5;font-size: 12px;">
+      <h2 class="accordion-header" id="heading14">
+        <button class="accordion-button" type="button" onclick="toggleAccordion('collapse14')" style="background-color:#EEBC86; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+          More Info
+        </button>
+      </h2>
+      <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="font-size: 16px;">
+
+          <p>To fully understand the market size and overall potential revenues for E. esperance, we decided to do an analysis of the Total Addressable Market (TAM), Serviceable Addressable Market (SAM), and the Service Obtainable Market (SOM).</p>
+
+          <p>The <b>Total Addressable Market (TAM)</b> refers to the total market demand or opportunity for a specific product or service. It represents the entire potential market for E. esperance, assuming there are no limitations or restrictions, regardless of practical constraints. In the case of E. esperance for TMAU patients, the <b>TAM would encompass all individuals globally who are affected by TMAU</b>. This would be the largest possible number of individuals who could benefit from the probiotic. </p>
+
+          <p><b>The Serviceable Addressable Market (SAM)</b> represents the portion of the TAM that a company can realistically target and serve with its product or service. It takes into account factors such as geographical limitations, regulatory constraints, and the company's resources. For E. esperance in the context of TMAU, the <b>SAM would encompass the subset of TMAU patients who are reachable and can access the product, primarily in the United States</b>. This is also determined by factors like regulatory approvals in specific regions, the ability to manufacture and distribute the probiotic, and the availability of healthcare infrastructure to support diagnosis and treatment.</p>
+
+          <p><b>The Service Obtainable Market (SOM)</b> is the specific segment of the SAM that a company can realistically capture and serve, considering its marketing efforts, distribution channels, competition, and other factors. In the case of E. esperance, <b>SOM would be the subset of TMAU patients within the SAM who can be effectively reached and willing to use E. esperance</b>. This would depend on the company's marketing strategies, partnerships with healthcare providers, pricing, and the overall accessibility of the product. </p>
+
+          <p>Below represents a figure of all 3 Markets and the potential values attained through the product, E. esperance.</p>
+
+            <p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/tamsamsom-4.png" width="900" height="550"> </center> </p>
+
+        <p> The profitability of E. esperance  can be evaluated based on Industry Averages for Online Vitamin and Supplement Sales in the United States, where the average profit margin typically stands at <b>6%</b> [21]. Applying this benchmark to our project, the anticipated profitability falls within a range of <b>$1.8 million to $5.5 million</b>, factoring in our lowest and highest calculated scenarios. This estimation provides a reasonable financial outlook, considering the potential market size and demand for a solution to address TMAU, a rare but impactful condition. </p>
+
+        <p> As mentioned prior, collaborating with the <b>Florida Agency for Health Care Administration (FAHCA)</b> offers a promising avenue for enhancing the affordability of our product for patients. If successful, such collaboration could lead to E. esperance being covered by Medicaid, a government-funded healthcare program for low-income individuals. This would significantly alleviate the financial burden on patients, justifying the potentially high annual expense associated with our probiotic. Even in cases where Medicaid coverage might not be attainable, it's worth noting that TMAU patients have expressed a strong willingness to invest in treatments that can alleviate their symptoms.</p>
+
+        <p> This strong encouraging response shows the pressing need for an effective solution in addressing TMAU, where patients often grapple with significant challenges and are willing to invest in their well-being. In the context of rare diseases, it is expected that treatment plans may carry substantial costs, particularly during their initial introduction to the market, reflecting the specialized nature of these therapies and the smaller patient populations they serve.</p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <br><br>
+    <div class="safety-container" style="background-color: #99A574; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: copperplate; padding-top:10px;">Production Process</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="margin:0;">
+    <div class="accordion-item" style="background-color:#E0E9D5;font-size: 12px;">
+      <h2 class="accordion-header" id="heading8">
+        <button class="accordion-button" type="button" onclick="toggleAccordion('collapse8')" style="background-color:#EEBC86; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+          More Info
+        </button>
+      </h2>
+      <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="font-size: 16px;">
+          <p>    <p> Our discussions with <b>Dr. John W.K. Oliver, Vice President of Research & Development for ZBiotics</b> have informed the feasibility of scaling up the production of E. Esperance in a commercially viable manner. Given our status as a relatively small company and our commitment to fiscal responsibility, the decision not to invest heavily in building an independent production facility at this stage is a strategic one. This approach is particularly prudent as our company has not yet generated profits, making resource allocation a critical consideration.</p>
+          <p>Instead, we have devised a streamlined and effective approach: forging partnerships with a Supplier, Manufacturer, and Distribution Facility. Under this model, the Supplier will play a pivotal role in providing the essential bacterial strains required for the production of E. Esperance. Simultaneously, the Manufacturing Facility will be responsible for taking our laboratory-developed methods for producing E. Esperance and translating them into large-scale commercial production. It's noteworthy that these production methods will be safeguarded through patenting to ensure both safety and security in our operations. Our Laboratory Methods can be found on the <a href="https://2023.igem.wiki/fsu/protocol" class="link" target="_blank">Protocols Page</a>. </p> 
+          <p> By fully outsourcing our production processes, we can efficiently manage costs, a crucial factor for a growing company like ours. To make E. Esperance easily accessible to Trimethylaminuria (TMAU) patients, we intend to leverage the convenience of e-commerce platforms. Partnerships with trusted suppliers such as Amazon or Mark Cuban Cost Plus Drugs, that share our commitment to customer trust, will play a pivotal role in this endeavor. </p>
+          <p> Ensuring the proper handling and storage of E. esperance during shipment is paramount. Maintaining the product at room temperature is essential to prevent premature expiration. Recognizing the need for accommodating regions with less stable medical distribution networks, we are exploring the implementation of <b>lyophilization</b>. Lyophilization is a preservation technique that maintains probiotic stability by removing water content at low temperatures. By freezing the probiotic solution, removing water via sublimation, and storing the probiotics in a dry form, this process extends their shelf life and minimizes the risk of degradation, ensuring their long-term viability. This method, known for its simplicity and effectiveness, offers the distinct advantage of preserving the stability of E. esperance for extended periods. By adopting lyophilization, we aim to ensure that even patients in third-world countries can access E. esperance without a significant increase in cost, furthering our mission to make this valuable treatment widely available for TMAU patients globally. </p>
+     
+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="safety-container" style="background-color: #99A574; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: copperplate; padding-top:10px;">Clinical Study</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="margin:0;">
+    <div class="accordion-item" style="background-color:#E0E9D5;font-size: 12px;">
+      <h2 class="accordion-header" id="heading9">
+        <button class="accordion-button" type="button" onclick="toggleAccordion('collapse9')" style="background-color:#EEBC86; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+          More Info
+        </button>
+      </h2>
+      <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="font-size: 16px;">
+          <p> As discussed, E. esperance is solely designed for patients with Trimethylaminuria (TMAU), which means a small population size ranging from 80,000 to 800,000 patients, possibly more. From the results showing that E. esperance reduces the concentration of Trimethylamine (TMA), the product produces positive findings in the laboratory setting. However, this preclinical result does not guarantee that E. esperance will work in the human body. Speaking with several physicians, it is important for an FDA-compliant treatment to be safe and effective so physicians can feel confident in recommending (not prescribing) E. esperance to their patients. Discussions with both <b>Dr. Alma Littles, Dean of the FSU College of Medicine & Dr. James Ed. Martin, Pediatrician of Professional Park Pediatrics</b> can be found on our <a href="https://2023.igem.wiki/fsu/ent-timeline" class="link" target="_blank">Entrepreneurship Timeline<a/>. <b>This Study proposes to test 2000 patients, however, a preliminary study will be conducted with <u>100 participants</u> given the difficulty to reach out to that many TMAU patients successfully, and to account for attrition rate</b>.</p>
+
+            <p> It is also important to note that this study would be completed using grant funding from multiple Committees and Institutes. To confirm that E. esperance is effective, a small trial of 1,000 patients with HIGH levels of TMA and 1000 with LOW levels of TMA is required. </p>
+        
+            <p> This study will be performed to follow the Food & Drug Administration (FDA) Standards and will study participants in the United States due to resources. The study would first begin by confirming TMA concentrations of study participants who have high versus low levels of TMA in urine. Urine samples will be mailed to the respected facility. </p>
+        
+            <p> Once the set of participants is confirmed, the trial will enroll 2000 adult participants (age 18 and older). The trial will be double-blind, with both participants and investigators blinded to group assignments. The probiotic and placebo supplements will be identical in appearance, packaging, and taste. Generally, from the model of the company Z-Biotics, the taste will be minimal to a light-citrus flavor to avoid affecting the E. coli present in both E. esperance and the placebo. </p>
+        
+            <p> This study will last 4 weeks. The 2 Treatment groups, as mentioned, are the Probiotic Group, which has E. esperance, and the Placebo Group, which is a generic probiotic with no effect on TMA Concentration. Both Groups will have 1000 HIGH TMA Concentration Patients and 1000 LOW TMA Concentration Patients, respectively. </p>
+        
+            <p> Participants in both groups will take a daily oral dose (Monday – Friday), and urine samples will be taken EVERY Sunday (Before Treatment) and the next Sunday (After 6 daily doses) for the FIRST week. The following weeks will collect Urine Samples each Sunday This will also include a subjective questionnaire on Saturdays with 2 questions, “Do you notice a decrease in harsh odor smell?” and “Do others notice a decrease in harsh odor smell?” </p>
+        
+            <p> The remaining weeks for Urine Samples will be tested EVERY Week. Each cup will be properly labeled with respective QR codes to allow efficient transition and testing for the lab technicians. Urine Samples will be mailed to the respected Clinical Facility for testing. To analyze TMA concentration, the facility will utilize the technique of <b>Liquid Chromatography-Mass Spectrometry</b> [5]. </p>
+        
+            <p> As mentioned, this study will last 4 weeks. With 2,000 participants in the study, this will give the study a significant number of data points to suggest if E. esperance is reducing TMA concentrations. </p>
+        
+            <p> This comprehensive clinical trial is designed to provide useful evidence regarding the potential benefits of E. esperance in reducing urinary TMA concentrations in individuals with TMAU. The rigorous study design, double-blind procedure, and frequent data collection points will contribute valuable insights into the effectiveness and safety of E. esperance as a potential treatment for managing TMAU and will help determine if E. esperance decreases concentrations of TMA consistently. </p>
+        
+            <p> Safety & Ethics are extremely important for this study. All participants will provide informed consent before participating in the trial, including detailed information about the study, potential risks, and benefits. The trial protocol will undergo rigorous review and approval by an independent Institutional Review Board (IRB) to ensure participant safety, ethical conduct, and compliance with relevant regulations. </p>
+        
+            <p> A diagram of the overall study description is shown below. </p>
+
+            <p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/inkedclinicaltrial-li.jpg"/> </center></p>
+        
+            <p> This study can also be continued to see how effective  changes in diet can affect the concentration of TMA. With that said, The Human Practices Team developed a cookbook to help with potential decreases in TMA production. This can be found on the <a href="https://2023.igem.wiki/fsu/cookbook" class="link" target="_blank"> Cookbook Page</a>. The study will be much MORE rigorous since we would need a daily Urine Sample before and after completing meals and consuming either the E. esperance treatment OR Placebo treatment. Urine samples being taken at the end of each day after treatment. Each day will consist of a strict different diet. Factors to consider are if any test subject has any allergic restrictions, an alternative meal plan will be provided. </p>
+        
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="safety-container" style="background-color: #99A574; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: copperplate; padding-top:10px;">Market Authorization</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="margin:0;">
+    <div class="accordion-item" style="background-color:#E0E9D5;font-size: 12px;">
+      <h2 class="accordion-header" id="heading10">
+        <button class="accordion-button" type="button" onclick="toggleAccordion('collapse10')" style="background-color:#EEBC86; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+          More Info
+        </button>
+      </h2>
+      <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="font-size: 16px;">
+          <p> Although Clinical Trials are not required for an FDA-compliant treatment like E. esperance, we believe providing trust to our patients is absolutely essential to grow the venture. With that said, compared to most pharmaceutical drugs, E. esperance has a relatively simpler path to market authorization. </p>
+
+            <p> 
+        To understand how market authorization works, we spoke to several industry experts and gained tremendous candid feedback. A detailed description of our meetings can be found on the <a href="https://2023.igem.wiki/fsu/ent-timeline" class="link" target="_blank">Entrepreneurship Timeline<a/> Page. 
+              </p>
+        
+              <p>
+        Simply put, Market Authorization is a critical step in ensuring that healthcare products meet established standards for safety and efficacy before they are made available to healthcare professionals and patients. The Food and Drug Administration has not stamped FDA approval for any probiotic to date. The reason behind this is due to the enormous cost & time associated with going through numerous phases of trials. Many probiotic companies are not advertising a cure for any of their products, which alleviates the need to go through the official approval status. Therefore, E. esperance will be classified as an FDA-compliant probiotic treatment instead of being FDA-approved. 
+                </p>
+        <p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/fda.png"/> </center></p>
+                <p>
+        In order to be considered FDA-compliant, E. esperance will follow <b class="bold">21 CFR 117: CURRENT GOOD MANUFACTURING PRACTICE, HAZARD ANALYSIS, AND RISK-BASED PREVENTATIVE CONTROLS FOR HUMAN FOOD</b>, and to follow the appropriate guidelines, the following must be accomplished:
+                  </p>
+        
+        <p>
+            <li> Hire or designate qualified personnel with expertise in Good Manufacturing Practices (GMPs) and food safety regulations to oversee compliance efforts </li>
+            <li> Establish and maintain a facility that meets FDA requirements for cleanliness, sanitation, and organization.  </li>
+            <li> Implement adequate controls to prevent contamination and ensure product integrity of E. esperance. </li>
+            <li> Develop written Standard Operating Procedures (SOPs) covering all aspects of production, quality control, labeling, and distribution. </li>
+            <li> Implement a working quality control system to monitor and verify the quality and safety of ingredients and finished products of E. esperance.  </li>
+            <li> Perform testing and verification to ensure identity, purity, strength, and composition of E. esperance. </li>
+            <li> Ensure that partnered suppliers and distributors meet the same quality and safety standards. </li>
+            <li> Ensure that product labels comply with FDA regulations regarding content, format, and claims. </li>
+            <li> Implement preventive controls to mitigate identified hazards. </li>
+            <li> Register the production facility with the FDA through the FDA Food Facility Registration portal. </li>
+            <li> Always be proactive & prepared for FDA inspections. </li>
+         </p>
+        
+         <p>Compliance with FDA regulations, specifically <b class="bold">21 CFR 117</b>, is essential for ensuring the safety and quality of E. esperance. Although maintaining complex is a complex process and requires a commitment to ongoing regulations, regular training, and a strong quality assurance program, we are committed to bringing the best and safest product to the market for the betterment of society.</p>
+        
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br> <div class="safety-container" style="background-color: #99A574; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: copperplate; padding-top:10px;">Safety</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="margin:0;">
+    <div class="accordion-item" style="background-color:#E0E9D5;font-size: 12px;">
+      <h2 class="accordion-header" id="heading11">
+        <button class="accordion-button" type="button" onclick="toggleAccordion('collapse11')" style="background-color:#EEBC86; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+          More Info
+        </button>
+      </h2>
+      <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="font-size: 16px;">
+          <p> Trimethylaminuria (TMAU) poses unique challenges for both patients and physicians due to its impact on daily life and lack of effective treatment options. The introduction of E. esperance offers hope for alleviating the symptoms associated with this condition; however, our approach is to place a strong emphasis on safety. </p>
+            <p> Clear instructions will be provided, stressing the importance of adhering to the proper dosage (which will be determined through the Clinical Study). Patients will be encouraged to monitor their progress and promptly report any adverse effects or unexpected symptoms to their healthcare providers (and these will be collected by the company). Allergies or sensitivities to any components of the treatment must be assessed, and patients should be informed about what to do in case of an allergic reaction. Additionally, guidance on dietary modifications and lifestyle adjustments that can complement the treatment will be provided. </p>
+            <p><center><img src="https://static.igem.wiki/teams/4680/wiki/patient-doctor-convo.png"width="350" height="500"></center> </p>
+            <p> Physicians play a critical role in ensuring the safe and effective use of this proposed treatment. Patient assessment, including diagnostic criteria and genetic testing, is essential for confirming the TMAU diagnosis. Physicians must be well-informed about available treatment options, emphasizing the benefits and potential risks associated with each choice. Physicians will also be educated about possible drug interactions and guidelines for adjusting treatment plans accordingly. Since our product is not FDA-approved, E. esperance does not require a prescription. Nonetheless, having physician support will allow TMAU patients to feel more inclined to purchase E. esperance.</p>
+            <p> Informed consent is fundamental, and patients must fully understand the treatment and its implications before consuming E. esperance. Providing educational resources and materials to patients will enhance their comprehension and empowers them to actively participate in their care. Open communication, addressing patient questions and concerns will foster a collaborative approach to treatment, through a virtual hotline that customers can access. </p>
+            <p> We, along with patients and physicians must work together, adhering to safety guidelines, reporting mechanisms, and emergency protocols to ensure the effective and secure utilization of E. esperance. A commitment to safety is part of the ultimate goal of managing TMAU and improving the well-being of those affected.</p>
+               
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br> <div class="safety-container" style="background-color: #99A574; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: copperplate; padding-top:10px;">What's Next?</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="margin:0;">
+    <div class="accordion-item" style="background-color:#E0E9D5;font-size: 12px;">
+      <h2 class="accordion-header" id="heading12">
+        <button class="accordion-button" type="button" onclick="toggleAccordion('collapse12')" style="background-color:#EEBC86; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+          More Info
+        </button>
+      </h2>
+      <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="font-size: 16px;">
+          <p> 
+            Trimethylaminuria (TMAU) considered a very rare disease, should not be ignored. Since beginning our research, we contacted our local state’s health department, The Florida Department of Health, and more specifically, the Rare Disease Advisory Council, established by <b class="bold">Florida Statute Section 381.99</b>. The Rare Disease Advisory Council classifies a medical condition as a “rare disease” if the condition affects fewer than 200,000 people in the United States. With that said, there is a strong likelihood that TMAU qualifies by this statement, and we hope an initiative takes place after the Jamboree. The Council is offering over $500,000 in grants to fund rare disease research that we plan to apply for after the Jamboree. This funding can support further investigations into TMAU and the development of E. esperance outside of a proof-of-concept.
+            </p>
+            
+            <p>E.esperance will continue examining the efficacy and safety of our product for customers. While also analyzing our Business Model even more with other stakeholders. We hope to proceed with FDA compliance in the coming years by backing our research with a successful clinical study and sufficient experimental results. As of September 2023, <b class="bold">FSU College of Medicine’s Institute for Pediatric Rare Diseases (IPRD) </b> has agreed to support the research and initiative of E.esperance beyond the iGEM project that started it all. The Institute was created by a grant of $1 Million legislatively allocated, with the intention to review research projects that fit the IPRD's mission and provide funds for start-up support [10].</p>
+
+          <p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/medicine-fsu.jpg"width="500" height="450">
+          <img src="https://static.igem.wiki/teams/4680/wiki/fl-health-hi-res.jpg"width="500" height="450">
+          </center>
+          </p>
+          <p> <center> <b class="bold">Figure 2: FSU College of Medicine (Left) & Florida Department of Health (Right)</b> </center></p>
+
+            <p> The funding provided by the IPRD will be utilized for the next 6 months after the iGEM Jamboree, testing the hypothesis that: <b>"A TMA Oxidation Cell converts TMA to TMAO at therapeutic levels for TMAU patients."</b> The specific aim of the proposed project is to rigorously test the performance of the TMA Oxidation Cells in an in vitro model of the human small and large intestines. Below are the steps to be continued after the Jamboree.</p>
+
+            <li><b>Expected Outcome</b> - The expected impact of accomplishing the aim is the delivery of an engineered cell that is a candidate cell-based therapeutic for TMAU that could proceed towards in vivo testing. </li>
+            </p>
+            
+            <p>Using the knowledge gained from research on Trimethylaminuria (TMAU), the science can potentially foster possible solutions for other rare specific enzyme-deficient diseases such as: Gaucher Disease, Hurler Syndrome (MPS I), Pompe Disease, Galactosemia, and Wilson Disease. This can also expand the number of individuals we can help and grow our Business Model to encompass treatments for aforementioned diseases. </p>
+
+            <p>We aim to inspire hope and to facilitate a creative & innovative environment to solve issues in the Healthcare Industry utilizing Synthetic Biology. We envision this company to provide hope & trust to those who need it most, with our main focus on rare diseases that do not gain enough funding for research.<b>Our goal is to bring novel treatments to those that are often forgotten and to make rare diseases treatable through E. esperance</b>. </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br> <div class="safety-container" style="background-color: #99A574; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: copperplate; padding-top:10px;">Collaborations</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="margin:0;">
+    <div class="accordion-item" style="background-color:#E0E9D5;font-size: 12px;">
+      <h2 class="accordion-header" id="heading13">
+        <button class="accordion-button" type="button" onclick="toggleAccordion('collapse13')" style="background-color:#EEBC86; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+          More Info
+        </button>
+      </h2>
+      <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="font-size: 16px;">
+          <p> This Implementation Analysis would not have been successful without the generous, candid feedback we received from Researchers & Experts across the country. To see more in-depth on our Collaborations, please review the <a href="https://2023.igem.wiki/fsu/ent-timeline" class="link" target="_blank">Entrepreneurship Timeline<a/> Page. 
+          </p>
+              
+              <p> 
+              
+              <li> Dr. John Casey, Senda Biosciences, Head of Business Development </li>
+              <li> Mr. Michael Taylor, Researcher, Ginko Bioworks </li>
+              <li> Mr. Ron Frazier M.S., Jim Moran School of Entrepreneurship, Teaching Faculty II & Entrepreneur in Residence </li>
+              <li> Mr. Bill Lickson, North Florida Innovation Labs, Director </li>
+              <li> Dr. Robert J. Tomko Jr., FSU College of Medicine, Associate Professor </li>
+              <li> Mr. Bill Hollimon, Hollimon, P.A., Patent Attorney </li>
+              <li> Mr. Garrett Edmunds, FSU Office of Research & Commercialization, Licensing Manager </li>
+              <li> Dr. Ravinder Nagpal, FSU College of Health & Human Sciences, Assistant Professor </li>
+              <li> Ms. Brooke McDuffie, Novartis, Medical Science Liasion </li>
+              <li> Dr. Robley J. Light, FSU Department of Chemistry & Biochemistry, Professor Emeritus</li>
+              <li> Dr. Terence Crofts, FSU College of Medicine, Assistant Professor</li>
+              <li> Dr. Timothy Logan, FSU Department of Chemistry & Biochemistry, Associate Dean</li>
+              <li> Dr. Darren Brooks, FSU College of Business, Assistant Dean for Executive and Professional Programs, Assistant Department Chair, Senior Lecturer and MBA Program Director</li>
+              <li> Mr. John Wilcox, Diatech Diabetes, Chief Executive Officer (CEO) & Cofounder</li>
+              <li> Mr. Luis E. Blanco, Diatech Diabetes, Chief Technical Officer (CTO) & Cofounder</li>
+              <li> Dr. Alma Littles, FSU College of Medicine, Interim Dean</li>
+              <li> Dr. Stephen Arce, FAMU-FSU College of Engineering, Teaching Professor</li>
+              <li> Dr. Emily Pritchard,Florida State University, Assistant Vice President for Academic Affairs for Health Innovation & Strategic Alliances</li>
+              <li> Mr. Jared Namm,The Berman Law Group, Corporate Law Attorney</li>
+              <li> Dr. Joseph Frascella, FSU Office of Clinical Research, Chief Clinical Research Officer</li>
+              <li> Dr. James Ed. Martin, Professional Park Pediatrics, Pediatrician</li>
+              <li> Dr. Justin Vining, Wolfson Children's Hospital, Pediatric Cardiologist</li>
+              <li> Dr. John W.K. Oliver, ZBiotics, Vice President of Research & Development</li>
+              <li> Mr. Jovey Osagie, FSU iGEM 2021 Team Lead</li>
+              <li> Mr. Ben Arney, FSU iGEM 2022 Entrepreneurship Lead</li>
+              <li> Mr. Douglass Tatum, Jim Moran School of Entrepreneurship, Teaching Faculty II and Entrepreneur in Residence </li>
+              <li> Dr. Pradeep Bhide, FSU College of Medicine, Jim and Betty Ann Rodgers Eminent Scholar Chair of Developmental Neuroscience & Director of the Center for Brain Repair
+              <li> Dr. Richard Nowakowski, FSU College of Medicine, Randolph L. Rill Professor and Department Chair of Biomedical Sciences </li>
+              <li> Dr. Michelle Arbeitman, FSU College of Medicine, Professor </li>
+              <li> Dr. Cynthia Vied, FSU College of Medicine, Research Faculty I</li>
+              <li> Mr. Hogan Nease, Consultant at Florida Blue, Finance and Entrepreneurship Student </li>
+              <li> Mr. Julian Fernandez, Finance and Entrepreneurship Student, Treasurer of FSU Bowling Team </li>
+              <li> Ms. Brenda Garner, Jim Moran School of Entrepreneurship, Teaching Faculty I</li>
+              <li> Dr. Matthew M. Carter, CFA - Jim Moran College of Entrepreneurship, STEM Entrepreneurship Program Director and Specialized Faculty</li>
+              <li> Dr. Brent Edington, FSU Office of Commercialization, Director</li>
+          
+              
+              
+              </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <br><br> <div class="safety-container" style="background-color: #99A574; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+     <h1 style="font-family: copperplate; padding-top:10px;">References</h1>
+  </div>
+  <div class="accordion" id="accordionExample" style="margin:0;">
+        
+        <div class="accordion-item" style="background-color:#E0E9D5; font-size: 12px;">
+          <h2 class="accordion-header" id="headingref">
+            <button class="accordion-button" type="button" onclick="toggleAccordion('collapseref')" style="background-color:#EEBC86; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+              More Info
+            </button>
+          </h2>
+          <div id="collapseref" class="accordion-collapse collapse" aria-labelledby="headingref" data-bs-parent="#accordionExample">
+            <div class="accordion-body"style="font-size: 16px;">
+              
+<p><b>[1]</b> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4854139/ </p>
+<p><b>[2]</b> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3052392/ </p>
+<p><b>[3]</b> https://www.ncbi.nlm.nih.gov/books/NBK1103/ </p>
+<p><b>[4]</b>https://investor.synlogictx.com/static-files/0f99e337-08a8-4a11-b002-c237bdf0af30 </p>
+<p><b>[5]</b> https://pubmed.ncbi.nlm.nih.gov/32316639/ </p>
+<p><b>[6]</b> https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/CFRSearch.cfm?CFRPart=117 </p>
+<p><b>[7]</b> https://www.floridahealth.gov/provider-and-partner-resources/rdac/index.html </p>
+<p><b>[8]</b> https://healthpolicy.usc.edu/research/flow-of-money-through-the-pharmaceutical-distribution-system/ </p>
+<p><b>[9]</b> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3815763/ </p>
+<p><b>[10]</b> https://news.fsu.edu/news/university-news/2023/06/15/state-budget-provides-critical-support-as-florida-state-university-looks-to-advance-strategic-goals/ </p>
+<p><b>[11]</b> https://www.ema.europa.eu/en/documents/scientific-guideline/ich-e-3-structure-content-clinical-study-reports-step-5_en.pdf </p>
+<p><b>[12]</b> https://patents.google.com/patent/WO2017075485A1/en </p>
+<p><b>[13]</b> https://zbiotics.com/ </p>
+<p><b>[14]</b> https://www.sendabiosciences.com/ </p>
+<p><b>[15]</b> https://www.raps.org/News-and-Articles/News-Articles/2022/9/Global-overview-for-probiotics-Trends-markets-and </p>
+<p><b>[16]</b> https://www.interexchange.org/articles/visit-the-usa/understanding-us-healthcare-system/#:~:text=Patients%20pay%20monthly%20health%20insurance,and%20then%20pay%20for%20services.</p>
+<p> <b>[17]</b> https://pubs.acs.org/doi/10.1021/acs.analchem.6b01170 </p>
+<p> <b>[18]</b> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6463069/ </p>
+<p> <b>[19]</b> https://www.genome.gov/Genetic-Disorders/Trimethylaminuria </p>
+<p> <b>[20]</b> https://biorelevant.com/learning_center/</p>
+<p> <b>[21]</b> https://my.ibisworld.com/us/en/industry-specialized/od5091/at-a-glance </p>
+<p><b>[22]</b> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7062668/#:~:text=Viability%20In%20vitro-,Probiotic%20viability%20is%20generally%20determined%20by%20quantifying%20its%20resistance%20to,cfu%20of%20initial%20viable%20cells </p>
+
+       </div>
+         </div>
+        </div>
+        </div>
+        <br><br>
+{% endblock %}

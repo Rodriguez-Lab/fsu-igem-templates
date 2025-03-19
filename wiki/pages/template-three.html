@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+{% block title %}Overview{% endblock %}
+{% block lead %}We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.{% endblock %}
+{% block head %}
+<img src="https://static.igem.wiki/teams/4680/wiki/banners/banners/banners/engineering-success.png" style="width:100%; object-fit: cover; padding-top:0px;">
+{% endblock %}
+{% block page_content %}
+<style>
+  p{
+    font-size: 16px;
+    line-height:2em;
+    font-weight: 500;
+  }
+</style>
+<div class="safety-container" style="background-color: #86B0B3; color:black; margin:20px;height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+  <h1 style="font-family: 'Passion One', sans-serif; letter-spacing: 0.05em;; padding-top:10px;">Overview</h1>
+</div>
+
+  <p style="font-size:16px;">Trimethylamine, or TMA, is a tertiary amine that is the same compound responsible for the smell of fish. This compound is formed from the breakdown of precursors such as choline, betaine, L-carnitine and y-butyrobetaine in the intestinal microflora [1]. The pathways of how these precursors convert to one another and eventually to TMA is shown in Figure 1. These precursors are mostly found in foods such red meat, eggs, fish, and legumes. A predominant precursor of TMA is L-carnitine, which can be converted into TMA by carnitine oxidoreductase or to other precursors that lead to TMA as shown below.</p>
+  <p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/tma-dietary-precursors-and-enzymes.png" width="600" height="500"> </center></p>
+  <p> <center> <b class="bold">Figure 1: Dietary Precursors and Corresponding Enzymes for Trimethylamine (TMA)</b> </center></p>
+  <p style="font-size:16px;">TMA is then absorbed into the bloodstream and oxidized by hepatic flavin monooxygenases such as FMO1 and FMO3. For a healthy human, this means the strong smell TMA gives off is eliminated once the compound is oxidized in the liver. Figure 2 (left) shows the overall pathway of TMA in a healthy human's body. Once these precursor-containing foods enter the small intestine, they are converted to TMA and enter the bloodstream. Now in the bloodstream, TMA travels to the liver where it is oxidized by the FMO3 enzyme and excreted through urine. Most of the body's TMA is excreted this way. In Figure 2 (right), TMA takes the very same pathway up until the oxidation step, instead accumulating and eventually leaving the body through the sweat, breath, and other bodily fluids. These elevated TMA levels cause malodorous symptoms in people with this disease. Many people report smelling the same as a fish, but others have reported having other, various odors. These people have a rare disease called Trimethylaminuria, or TMAU.</p>
+  <p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/tma-cycle-in-healthy-person.png"width="450" height="400"><img src="https://static.igem.wiki/teams/4680/wiki/tma-cycle-in-tmau-patient.png"width="450" height="400"></center></p>
+  <p> <center> <b class="bold">Figure 2: TMA Cycle of Non-TMAU Patient (Left) & TMA Cycle of TMAU patient (Right)</b> </center></p>
+  <p style="font-size:16px;">There are several factors that lead to why one may have TMAU or may develop this rare disease. Doctors have classified this disease into primary and secondary TMAU. Primary TMAU is a result of having a deficient hepatic FMO3 gene [2]. Inheritance of primary TMAU may be inherited via an autosomal recessive pattern, where both parents have this mutation [3]. This alters the FMO3 gene's function, causing it to no longer be able to oxidize TMA into TMAO [4]. Therefore, primary TMAU patients are born with this rare disease and exhibit symptoms from birth or develop them later in life. Secondary TMAU is a result of developing TMAU with no prior genetic predisposition [3]. Causes include an overload of precurors, viral hepatitis, mensutration, or temporary childhood circumstances. Precursor overload occurs when patients with Huntington's disease or Alzheimer's disease have an excessive intake amount of choline. Hepatitis affects the liver's function, permanently changing the FMO3 enzyme's functionality and efficacy. Though understudied, women may experience lowered FMO3 enzyme functionality during periods of menstruation, causing a "transient" TMAU [5]. Hormonal shifts may cause transient childhood TMAU which usually goes away upon aging [6].</p>
+
+<!-- JavaScript for handling accordion functionality -->
+<script>
+  function toggleAccordion(id) {
+    var element = document.getElementById(id);
+    if (element.classList.contains("show")) {
+      element.classList.remove("show");
+    } else {
+      element.classList.add("show");
+    }
+  }
+</script>
+
+<div class="safety-container" style="background-color: #86B0B3; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+  <h1 style="font-family: 'Passion One', sans-serif; letter-spacing: 0.05em;; padding-top:10px;">Design</h1>
+</div>
+        <p>To mitigate this undesirable symptoms in TMAU patients, we considered restoring the FMO3 gene's functionality. Due to the complexity of genetic engineering and the natural variablity of individuals, this approach would not only be difficult, but may not work for certain individuals with different genetic profiles. As a result, we decided to let E. coli produce the enzyme necessary for the oxidation of TMA. This would then be given to patients, acting as a substitute for the FMO3 enzyme in healthy people. This probiotic solution will, when ingested before a meal, lead to the oxidation of TMA in the small intestine. We will be testing three different monooxygenase enzymes: Roseovarius species 217 trimethylamine monooxygenase, Ruegeria pomeroyi trimethylamine monooxygenase, and human flavin-containing dimethylaniline monooxygenase. The Roseovarius sp. 217 TMM and R. pomeroyi TMM enzymes are from the marine bacteria Roseovarius species 217 and Ruegeria pomeroyi. Roseovarius species 217 can grow on TMA as a sole nitrogen source and can also use TMA as a sole carbon and energy source. Ruegeria pomeroyi works in a similar fashion, with both bacteria oxidizing TMA and later metabolizing TMAO for energy. We found the Ruegeria pomeroyi TMM sequence from the 2014 iGEM team Paris Bettencourt, who took a slightly different approach for helping TMAU patients. While investigating Ruegeria pomeroyi, we found another bacteral enzyme that holds promise: Roseovarius species 217 TMM. The Roseovarius sp. 217 TMM is expected to have better enzymatic performance over the Ruegeria pomeroyi enzyme, so we were sure to include this in our experimentation [7]. Lastly,there is the human FMO3 enzyme. To gain a comprehensive understanding of enzymatic oxidation of TMA, it was necessary to test the normal FMO3 enzyme as well. We expect the TMM or FMO3 enzyme to be produced within E. coli cells, with TMA entering the E. coli cell. It is expected for TMA to be oxidized intracellularly.</p>
+      
+<br><br>
+
+    <div class="safety-container" style="background-color: #86B0B3; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: 'Passion One', sans-serif; letter-spacing: 0.05em;; padding-top:10px;">Build</h1>
+    </div>
+    <p>Figure 3 demonstrates how the biological designs were translated into a real solution to TMAU. The three biological devices made by Design (The Human FMO3 Generator, Roseovarius sp 217 TMM Generator, and R. pomeroyi TMM Generator) were inserted into plasmids, where the plasmids serve as vectors for the NEB Express Competent E. coli. Once transformed, the E. coli now can produce the enzymes necessary to oxidizes TMA into TMAO. This resultant E. coli can be packed into a pill or had as a probiotic drink, treating trimethylaminuria. </p>
+          <br>
+          <center> <img src="https://static.igem.wiki/teams/4680/wiki/engineering-images/engineering-images/home/engineering-images/figure-3-plasmids-to-probiotic.png" height="80%" width="80%"> </center>
+          <br>
+          <p> <center> <b class="bold">Figure 3: Plasmids to Probiotic</b> </center></p>
+          <p>Due to our design, our E. coli should continuously produce a TMA-oxidizing enzyme throughout its life cycle. To confirm this, we headed over to the laboratory. We are running experiments where a known concentration of TMA is mixed with a standard volume of probiotic solution. If our probiotic works properly, we should observe a decrease in TMA concentration over time and an increase in TMAO concentration. This would look like the below Figure 4.</p>
+      
+                    <center> <img src="https://static.igem.wiki/teams/4680/wiki/engineering-images/engineering-images/home/engineering-images/figure-4-tma-concentration-vs-time.png" height="80%" width="80%"> </center>
+          <br>
+          <p> <center> <b class="bold">Figure 4: TMA Concentration vs. Time</b> </center></p>
+
+<p>To ensure our results are meaningful, we need to set a timescale. For how long do we observe our probiotic solution interacting with TMA? According to BioNumbers, the average amount of time food spends traversing the small intestine is three to five hours [8]. Taking the average, the amount of time food spends in the small intestine is four hours. In other words, the probiotic has roughly four hours to interact with TMA located in the small intestine. This was used as the upper time limit. </p>
+
+<p>For all samples, 100 µL of 1 g/L of TMA was mixed with 400 µL of the probiotic solution suspended in LB broth. To observe a decrease in TMA concentration, it is necessary to have an initial time, or reference point. At zero hours, there should be almost all TMA and no TMAO. The two-hour interval serves as a midpoint, and the four-hour interval is the endpoint. After four hours, we should observe a drop in TMA concentration within the solution and an increase in TMAO. With these three data points, we should observe a downward trend in TMA concentration over time.</p>
+
+         
+    <br><br>
+    <div class="safety-container" style="background-color: #86B0B3; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: 'Passion One', sans-serif; letter-spacing: 0.05em;; padding-top:10px;">Test</h1>
+    </div>
+    <p>For quantification of trimethylamine, there are many methods such as HPLC, GC-MS, ion chromatography, and more [9].  Due to our connection to the FSU Biological Department, the team utilized HPLC for measuring TMA concentrations. HPLC also has one of the lowest limits of detection, or LOD, compared to other methods for TMA analysis [9]. The LOD is the lowest concentration of an analyte in a sample that can be consistently detected with a stated probability. Essentially, the lower the LOD, the more accurate an analysis method is. 
+</p>
+
+<p>With our Shimadzu Prominence HPLC, a tungsten lamp is used to test the absorbance levels of samples to quantify amounts of a compound. Due to TMA not having good UV-absorbance properties, it is typical to bind it with another molecule that offers good readability. 9-Fluorenylmethoxycarbonyl Chloride, or FMOC-chloride for short, is what our team used to ensure TMA can be measured with HPLC. FMOC-chloride, compared to other compounds such as ethyl-bromoacetate, has stronger UV absorbance due to its aromaticity. This means it will create the best defined “peak” on our chromatogram, making reading the amount of TMA easier. This is explained more fully below. This process of combining the two molecules for TMA detection is called derivatization. Figure 5 demonstrates the structure of TMA, FMOC, and the derivative. </p>
+
+<p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/engineering-images/engineering-images/home/engineering-images/figure-5-tma-fmoc-derivatization.png" width="80%" height="80%"> </center></p>
+  <p> <center> <b class="bold">Figure 5: TMA-FMOC Derivatization</b> </center></p>
+
+<p> To use HPLC for quantification of TMA, it is necessary to understand how HPLC works. HPLC uses a mobile phase, or a fluid that transports our sample, to move our TMA samples into a column. The stationary phase is the column, or where the TMA can interact with the contents. We utilized reversed-phase HPLC where the mobile phase is acetonitrile, and the stationary phase is a C18 column. Due to TMA being slightly polar, it will move through the column at a different rate than the acetonitrile and water mobile phase. Then, a detector will analyze the TMA. Our protocol was most inspired by <i>Liquid chromatographic determination of trimethylamine in water</i>, or [9].</p>
+
+<p> HPLC Operating Information </p>
+  <ul style=“list-style-type:disc”>
+    <li>Column: Water Sunfire C18 4.6 x 150 mm, 3.5 µm</li>
+    <li>Solvent A: Water</li>
+    <li>Solvent B: Acetonitrile</li>
+    <li>Flowrate: 1 mL/min; Detector set to 262 nm</li>
+    <li> Method: 60% for 3.5 min, 60-70% B over 10 min; 100% B for 2 min; 
+    60% B for 5 min</li>
+    </ul>
+  
+  <p>Figure 6 is a visualization of a chromatogram; this is the result of HPLC. These chromatograms have defined “peaks” for different retention times. Each peak is a unique compound. The area of a peak corresponds to the concentration of a compound. This diagram is actual data for a TMA-FMOC control sample run by Dr. Wood; where the TMA peak is large and indicated by the red arrow. The light blue line is the percentage of Solvent B, of acetonitrile present in the HPLC. </p>
+
+<p> <center> <img src="https://static.igem.wiki/teams/4680/wiki/engineering-images/engineering-images/home/engineering-images/figure-6-hplc-chromatogram.png" width="60%" height="60%"> </center></p>
+  <p> <center> <b class="bold">Figure 6: HPLC Chromatogram</b> </center></p>
+
+
+<p> Unfortunately, our control samples have not yielded meaningful results, so we are unable to provide data for our probiotic solution here. TMA does not appear on HPLC chromatograms or appears at different retention times. As a result, we must confirm the compounds detected and troubleshoot our HPLC calibration to continue with experimentation. We intend on updating this page with our results after the Wiki Thaw.</p>
+
+<p>
+  To get data from multiple sources, we contacted Dr. Timothy Wood from the Colorado Children’s Hospital. Through collaboration with Dr. Wood and the laboratory supervisor Cheryl Peck, we are testing our samples via tandem mass spectrometry. The Hospital analyzes real urine samples of real TMAU patients, so this process was efficient and a reliable way to support our findings. We have sent over a full series of 45 samples from an experiment, with controls, and at least two samples at zero, two, and four hours for E. coli that utilized all three samples. We are currently waiting for the results and will update this after the Wiki Thaw.
+  </p>
+
+
+         
+    <br><br>
+    <div class="safety-container" style="background-color: #86B0B3; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: 'Passion One', sans-serif; letter-spacing: 0.05em;; padding-top:10px;">Learn</h1>
+    </div>
+    <!-- Insert Information here -->
+    <p> Within the engineering group, we initially learned the most during the Fall and Spring semester when we researched TMA and TMAU. Nobody expected the many variables and complications with producing a reasonable solution. Loading a pill with the enzyme was a consideration, but the need for oxygen and riboflavin in a form that may not be possible for us to supply made this a nonideal concept. By using E. coli as a means for producing the enzyme, LB broth supplying an energy source for the cells and the cells itself should be a sufficient way to produce our enzyme. By far, the learning curve occurred in the laboratory. It has been very challenging to produce solid results demonstrating that TMA can be recognized and quantified accurately with HPLC. Moreover, creating the protocol and model for estimating TMA oxidation is uniquely difficult when nearly all literature data uses a reference initial amount of enzyme, not a continuously produced amount of enzyme such as with our probiotic solution. </p>
+      
+      <p>
+       Working with Dr. Wood, we learned the concentration of TMA in a human urine sample is roughly 100,000 x less than the concentrated 6.65 M trimethylamine we have in the laboratory. The samples we sent to the Colorado Children's Hospital had a TMA concentration of 0.00338 M, which is greater than their average TMA concentration in a urine sample of roughly 0.0000665 M. We have learned that it takes time to troubleshoot and understand how to fix problems for things that are understudied.
+      </p>
+     </div>
+    <br><br>
+    <div class="safety-container" style="background-color: #86B0B3; left:200px; color:black; margin:20px; top:10px; height:60px; padding-top:5px;text-align: center; border-radius: 25px;">
+      <h1 style="font-family: 'Passion One', sans-serif; letter-spacing: 0.05em;; padding-top:10px;">References</h1>
+    </div>
+    <div class="accordion" id="accordionExample" style="margin:0;">
+    <div class="accordion-item" style="background-color:#E0E9D5;font-size: 12px;">
+      <h2 class="accordion-header" id="heading9">
+        <button class="accordion-button" type="button" onclick="toggleAccordion('collapse9')" style="background-color:#F5C571; color:black; border: rgba(106, 83, 7, 0.543); font-size: 20px;">
+          References List
+        </button>
+      </h2>
+      <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="font-size: 16px;">
+          <p><b>[1]</b> Gatarek, P., &amp; Kaluzna-Czaplinska, J. (2021, February 11). Trimethylamine N-oxide (TMAO) in human health. EXCLI journal. https://pubmed.ncbi.nlm.nih.gov/33746664/</p>
+          <p><b>[2]</b> Chalmers, R. A., Bain, M. D., Michelakais, H., Zschocke, J., &amp; Iles, R. A. (2006). Diagnosis and management of trimethylaminuria (FMO3 deficiency) in children. Journal of inherited metabolic disease. https://pubmed.ncbi.nlm.nih.gov/16601883/</p>
+          <p><b>[3]</b> Lateef, A., &amp; Marshall-Lucette, S. (2017). Living with trimethylaminuria (TMAU) from an adult viewpoint. MagonlineLibrary. https://www.magonlinelibrary.com/doi/abs/10.12968/pnur.2017.28.8.344</p>
+
+          <p><b>[4]</b> Hernandez, D., Addou, S., Lee, D., Orengo, C., Shephard, E. A., &amp; Philips, I. R. (2003, September 22). Trimethylaminuria and a human FMO3 mutation database. Human mutation. https://pubmed.ncbi.nlm.nih.gov/12938085/</p>
+          <p><b>[5]</b> Shimizu, M., Cashman, J. R., &amp; Yamazaki, H. (2007). Transient trimethylaminuria related to menstruation. BMC Medical Genetics, 8(1). https://doi.org/10.1186/1471-2350-8-2 </p>
+<p><b>[6]</b> Mackay, R. J., McEntyre, C. J., Henderson, C., Lever, M., &amp; George, P. M. (2011, February). Trimethylaminuria: Causes and diagnosis of a socially distressing condition. The Clinical biochemist. Reviews. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3052392/</p>
+
+<p><b>[7]</b> Chen, Y., Patel, N. A., Crombie, A., Scrivens, J. H., & Murrell, J. C. (2011). Bacterial flavin-containing monooxygenase is trimethylamine monooxygenase. Proceedings of the National Academy of Sciences, 108(43), 17791–17796.https://doi.org/10.1073/pnas.1112928108 </p>
+
+<p><b>[8]</b> Uri, M. (2006). Small intestinal transit time. Small intestinal transit time - Unspecified - BNID 109070. https://bionumbers.hms.harvard.edu/bionumber.aspx?id=109070&ver=0&trm=time%2Bfood%2Bspends%2Bin%2Bsmall%2Bintestine&org= </p>
+
+<p><b>[9]</b> Fakhary, M., Xia, F., Koroma, M., & Dennison, M. (2022). A Quick and Accurate High Performance Liquid Chromatography (HPLC) Method to Determine the Amount of Trimethylamine in Fish Oil Softgels and Multivitamin Softgels Containing Fish Oil. LCBC North America, 40(72-76). https://doi.org/10.56530/lcgc.na.bs9787e7 </p>
+
+<p><b>[10]</b> Cháfer-Pericás, C., Herráez-Hernández, R., & Campins-Falcó, P. (2003). Liquid chromatographic determination of trimethylamine in water. Journal of Chromatography A, 1023(1), 27–31. https://doi.org/10.1016/j.chroma.2003.10.003 </p>
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+{% endblock %}
