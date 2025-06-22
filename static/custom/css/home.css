@@ -1,0 +1,10 @@
+.fullscreen-container {
+  width: 100vw;     /* Full viewport width */
+  height: 100vh;    /* Full viewport height */
+  margin: 0;        /* Remove any inherited spacing */
+  padding: 0;
+  display: flex;    
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

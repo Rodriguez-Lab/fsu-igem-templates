@@ -2,6 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
 
 
+/*
+QUICK NOTE: there is ALOT of css in this file.
+If you want to add new css, add it at the bottom of the file
+there's a comment for where new css stats
+
+DON'T FORGET TO USE CTRL + F TO FIND TEXT. IT WILL BE SUPER IMPORTANT FOR LOOKING THROUGH THIS FILE!!
+*/
+
+
+.sidebar a {
+  color: var(--primary)
+}
+
   .navbar {
   opacity: 0.8;
   border-radius: 2px;
@@ -11,13 +24,13 @@
   display: flex !important;
   font-size: 30px !important;
   font-family: 'Passion One', sans-serif !important;
-  background-color: #e0e9d5 !important;
+  background-color: var(--navbar) !important;
   padding-bottom:0px;
 }
 
 .navbar a {
   display: inline-block;
-  color: rgb(0, 0, 0);
+  color: var(--text-main);
   padding-top: 20px !important;
   padding-right: 50px !important;
   text-decoration: none;
@@ -26,30 +39,30 @@
   position: relative;
   z-index: 9999;
   opacity: 1;
-  background-color: #e0e9d5 !important;
+  background-color: var(--bg) !important;
 }
 
 .navbar a:hover {
-  color: green;
+  color: var(--primary);
   opacity: 1;
-  background-color: #e0e9d5 !important;
+  background-color: var(--bg) !important;
 }
 
 .dropdown {
   position: relative;
   z-index: 9999;
-  background-color: #e0e9d5 !important;
+  background-color: var(--bg) !important;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #e0e9d5 !important;
+  background-color: var(--bg) !important;
   z-index: 9999;
 }
 
 .dropdown-content a {
-  background-color: #e0e9d5 !important;
+  background-color: var(--bg) !important;
   padding: 0px;
   text-decoration: none;
   display: block;
@@ -59,25 +72,28 @@
 .dropdown:hover .dropdown-content {
   display: block;
   z-index: 9999;
-  background-color: #e0e9d5 !important;
+  background-color: var(--bg) !important;
   left:-20px !important;
 }
 
 .dropdown:hover > a {
-  background-color: #e0e9d5 !important;
+  background-color: var(--bg) !important;
 }
 
 .navbar .nav-item.dropdown:hover .dropdown-menu {
   display: block;
-  background-color: #e0e9d5 !important;
+  background-color: var(--bg) !important;
 }
 .navbar .dropdown::after {
   display: none !important;
-  background-color: #e0e9d5 !important;
+  background-color: var(--bg) !important;
 }
 
 body {
-  background-color: #E0E9D5;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: var(--text-main) !important;
+  color: var(--bg) !important;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -184,13 +200,13 @@ body {
    letter-spacing: 0.04em;
 }
 
+
 #navbarNavDropdown.collapse.navbar-collapse.justify-content-end{
   padding-right: 35px;
 }
 
 .navbar a {
   display: inline-block;
-  color: rgb(0, 0, 0);
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 50px;
@@ -202,7 +218,7 @@ body {
 }
 
 .navbar a:hover {
-  color: green;
+  color: var(--secondary);
 }
 
 .dropdown {
@@ -592,6 +608,8 @@ img.logo{
 }
 
 .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   width: 100%;
   height: auto;
 
@@ -911,19 +929,19 @@ i {
 #sidenav .nav-item.active {
   background-color: #27a020; /* Set the background color for the active item */
 }
-/* Style for the expanded section */
+/* Style for the expanded section 
 section.expanded {
   max-height: none;
   overflow: visible;
   transition: max-height 0.5s ease-in-out;
-}
+} */
 
-/* Style for the collapsed section */
+/* Style for the collapsed section 
 section:not(.expanded) {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
-}
+} */
 
 @keyframes SidenavStretchRight {
   0% {
@@ -1068,7 +1086,7 @@ section:not(.expanded) {
   font-weight: 400;
   font-size: 180px;
   text-transform: uppercase;
-  background-color: #E0E9D5;
+  background-color: var(--bg);
   mix-blend-mode: screen;
   z-index: 2; /* Ensure the title appears above other elements */
 }
@@ -1102,8 +1120,17 @@ section:not(.expanded) {
   background-color: green;
 }
 :root {
-  --accordion-color: #333;
-  --accordion-bg: #E0E9D5;
+  --bg: #0B1D2B;
+  --primary: #2185D5;
+  --secondary: #19A68C;
+  --highlight: #3EF8F2;
+  --danger: #FF4E50;
+  --text-main: #C9D6DF;
+  --text-faded: #8A9BA8; 
+  --navbar: #112C3F;
+
+  /*--accordion-color: #333;
+  --accordion-bg: var(--bg);
   --accordion-transition: 0.3s ease-in-out;
   --accordion-border-color: rgba(106, 83, 7, 0.543);
   --accordion-border-width: 1px;
@@ -1113,17 +1140,17 @@ section:not(.expanded) {
   --accordion-btn-padding-y: 10px;
   --accordion-btn-color: #333;
   --accordion-btn-bg:  #dfe5db;
-  --accordion-btn-icon: none; /* Provide an SVG icon or URL here */
+  --accordion-btn-icon: none; 
   --accordion-btn-icon-width: 20px;
   --accordion-btn-icon-transform: translateY(-2px);
   --accordion-btn-icon-transition: transform 0.3s ease-in-out;
-  --accordion-btn-active-icon: none; /* Provide an SVG icon or URL here */
+  --accordion-btn-active-icon: none; 
   --accordion-btn-focus-border-color: green;
   --accordion-btn-focus-box-shadow: 0 0 4px rgba(106, 83, 7, 0.543);
   --accordion-body-padding-x: 20px;
   --accordion-body-padding-y: 10px;
   --accordion-active-color: #fff;
-  --accordion-active-bg: green;
+  --accordion-active-bg: green;*/
 }
 
 .accordion {
@@ -1334,7 +1361,7 @@ img.flow {
     letter-spacing: 0.05em;
     color: #8d97ad;
     font-weight: 300;
-    background-color: #E0E9D5 !important;
+    background-color: var(--bg) !important;
 }
 
 .members h1,
@@ -1443,7 +1470,7 @@ a.socialIcon:hover,
 }
 
 .social-circle i {
-    color: #E0E9D5;
+    color: var(--bg);
     -webkit-transition: all 0.8s;
     -moz-transition: all 0.8s;
     -o-transition: all 0.8s;
@@ -1469,18 +1496,18 @@ img.teampic{
   height:500px;
 }
 .container{
-  background-color: #E0E9D5;
+  background-color: var(--text-main);
 }
 .container-fluid{
-  background-color: #E0E9D5;
+  background-color: var(--bg);
 }
 .bg-body-tertiary{
-  background-color: #E0E9D5;
+  background-color: var(--bg);
 }
 
 :root, [data-bs-theme=light] {
 
-  --bs-tertiary-bg-rgb: #E0E9D5;
+  --bs-tertiary-bg-rgb: var(--bg);
   --bs-heading-color: inherit;
 }
 
@@ -1582,12 +1609,228 @@ ul a:hover {
 }
 
 
+/* NEW CSS START HERE */
 
 
+/* 
+* 
+* Footer CSS 
+*
+*/
+
+footer {
+  background-color: var(--navbar);
+  color: var(--text-main);
+}
+
+#footer-container {
+  width: 100%;
+  padding: 20px;
+}
+
+#main-footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+  max-height: 1000px
+}
+
+#main-footer-container.collapsed {
+  max-height: 0;
+  overflow: hidden;
+}
+
+#iGEM-name-container {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  min-height: 150px;
+  padding: 10px;
+}
+
+#sponsor-container {
+  display: flex;
+  width: 66%;
+  min-height: 150px;
+ /* padding: 10px */
+}
+
+#link-container,
+#contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+  min-height: 150px;
+  padding: 10px;
+}
+
+#link-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sponsor-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+#footer-toggle-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 20px;
+}
+
+#footer-toggle {
+  padding: 5px 10px;
+  border-radius: 9999px;
+}
+
+#footer-toggle:hover {
+  background-color: crimson;
+  color: aliceblue;
+  transition: 0.2s ease-in-out
+}
 
 
+/*
+* 
+* Custom Template CSS
+* 
+*/
+
+/* css for the templates i made :) */
+
+.fullscreen-container {
+  width: 100vw;     /* Full viewport width */
+  height: 100vh;    /* Full viewport height */
+  margin: 0;        /* Remove any inherited spacing */
+  padding: 0;
+  display: flex;    
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fullscreen-container h1 {
+  font-size: 108px;
+}
+
+.page-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+#left-column {
+  display: flex;
+  /*justify-content: flex-start;*/
+  flex: 1;
+}
+
+#right-column {
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.sidebar {
+  align-self: flex-start;
+  height: fit-content;
+  padding: 15px;
+  padding-right: 0;
+  padding-left: 0;
+  border-radius: 10px;
+  position: sticky;
+  top: 20%;
+  /*transform: translateY(-50%);*/
+  
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--text-faded);
+  font-weight: 900;
+}
+
+.sidebar ul {
+  list-style-type: disc;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+ul ul {
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+.content-header {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.sub-content-header {
+  padding: 10px;
+  padding-left: 40px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.content {
+  /*flex: 1;*/
+  /*border: 2px solid black;
+  border-radius: 10px;*/
+  padding: 10px;
+  padding-bottom: 40px;
+  font-size: 18px;
+  overflow-y: auto;
+  background-color: var(--text-main);
+  color: var(--bg);
+}
+
+.sub-content {
+  padding: 10px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  font-size: 18px;
+  overflow-y: auto;
+  background-color: var(--text-main);
+  color: var(--bg);
+}
+
+img {
+  padding: 30px;
+  max-width: 100%;
+}
+
+.customHeight {
+  min-height: 100vh;
+}
 
 
+/*
+*
+* Header CSS
+*
+*/
 
+header {
+  color: var(--text-main)
+}
 
-
+.header-container {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
